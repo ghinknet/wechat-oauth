@@ -52,12 +52,12 @@ func doRequest(t *testing.T, cfg Config, path string, body string) (*http.Respon
 
 func doAuthorizeLink(t *testing.T, cfg Config, body string) (*http.Response, error) {
 	t.Helper()
-	return doRequest(t, cfg, "/wechat/authorizeLink", body)
+	return doRequest(t, cfg, "/wechat/authorize-link", body)
 }
 
 func doOpenIDCallback(t *testing.T, cfg Config, body string) (*http.Response, error) {
 	t.Helper()
-	return doRequest(t, cfg, "/wechat/openIDCallback", body)
+	return doRequest(t, cfg, "/wechat/open-id-callback", body)
 }
 
 // decodeData unmarshals the {code,data,msg} envelope and returns data.

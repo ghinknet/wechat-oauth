@@ -91,7 +91,7 @@ as an `*UpstreamError` carrying WeChat's `errcode` / `errmsg`.
 |----------------|---------|
 | `AppID`        | WeChat official-account / open-platform app ID. |
 | `AppSecret`    | Corresponding app secret. |
-| `AllowOrigins` | Allowed `redirect_uri` prefixes for `authorizeLink`. Empty entries are ignored. |
+| `AllowOrigins` | Allowed `redirect_uri` prefixes for `authorize-link`. Empty entries are ignored. |
 | `ErrorHandler` | Optional `func(c fiber.Ctx, err error) error`. Defaults to a 500 JSON response. |
 | `Unmarshal`    | Optional custom JSON decoder. Defaults to `encoding/json`. |
 | `HTTPClient`   | Optional `*http.Client` for WeChat API calls. Defaults to a client with a 10s timeout. Outbound calls are also bound to the inbound request context. |
